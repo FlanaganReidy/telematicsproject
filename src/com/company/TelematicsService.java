@@ -16,5 +16,20 @@ public class TelematicsService {
         fileWriter.write(json);
         fileWriter.close();
 
+
+    }
+    static void allFilesToInstances() throws IOException {
+        File file = new File(".");
+        for (File f : file.listFiles()) {
+            if (f.getName().endsWith(".json")) {
+                // Now you have a File object named "f".
+                // You can use this to create a new instance of Scanner
+                ObjectMapper mapper = new ObjectMapper();
+                VehicleInfo car = mapper.readValue(new File(String.valueOf(f)), VehicleInfo.class);
+                System.out.println(car);
+
+            }
+        }
+
     }
 }

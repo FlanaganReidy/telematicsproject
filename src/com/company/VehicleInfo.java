@@ -50,5 +50,16 @@ public class VehicleInfo {
     public void setEngineSizeInLiters(double engineSizeInLiters) {
         this.engineSizeInLiters = engineSizeInLiters;
     }
+
+    @Override
+    public String toString() {
+        return "VehicleInfo{" +
+                "_VIN=" + _VIN +
+                ", odometer=" + odometer +
+                ", consumption=" + consumption +
+                ", odometerAtLastOilChange=" + odometerAtLastOilChange +
+                ", engineSizeInLiters=" + engineSizeInLiters +
+                '}';
+    }
 }
 

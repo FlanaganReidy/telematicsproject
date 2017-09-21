@@ -1,5 +1,8 @@
 package com.company;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -24,6 +27,13 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            TelematicsService.allFilesToInstances();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }

@@ -29,10 +29,12 @@ public class Main {
         }
 
         try {
-            TelematicsService.allFilesToInstances();
+            TelematicsService.updateHtmlfile(TelematicsService.allFilesToInstances());
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
 
 
     }
